@@ -16,6 +16,7 @@ var hitTemplate =
        '<div class="media-body">' + 
        '<h4 class="media-heading">{{{_highlightResult.name.value}}} {{#stars}}<span class="ais-star-rating--star{{^.}}__empty{{/.}}"></span>{{/stars}}</h4>' + 
        '<p class="year">{{brand}}</p><p class="year">{{#brand}}<span class="badge">{{.}}</span> {{/brand}}</p>' + 
+       '<p class="year">{{price}}</p><p class="year">{{#price}}<span class="badge">{{.}}</span> {{/price}}</p>' + 
        '</div>' + 
        '</div>'; 
        
@@ -41,7 +42,7 @@ search.addWidget( instantsearch.widgets.pagination({ container: '#pagination', c
 
 search.addWidget( instantsearch.widgets.refinementList({ container: '#brand', attributeName: 'brand', operator: 'and', limit: 10, cssClasses: { list: 'nav nav-list', count: 'badge pull-right', active: 'active' } }) );
 
-search.addWidget( instantsearch.widgets.refinementList({ container: '#pricerange', attributeName: 'price-range', operator: 'and', limit: 10, cssClasses: { list: 'nav nav-list', count: 'badge pull-right', active: 'active' } }) );
+search.addWidget( instantsearch.widgets.refinementList({ container: '#pricerange', attributeName: 'price_range', operator: 'and', limit: 10, cssClasses: { list: 'nav nav-list', count: 'badge pull-right', active: 'active' } }) );
 
 search.addWidget( instantsearch.widgets.starRating({ container: '#ratings', attributeName: 'rating', cssClasses: { list: 'nav', count: 'badge pull-right' } }) );
 
